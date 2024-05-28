@@ -12,46 +12,55 @@ import m9 from '../assets/m9.jpg'
 
 const Data = [
     {
+        id: 1,
         name: 'John',
         image: m1,
         review :'This is model one'
     },
     {
+        id: 2, 
         name: 'elizbth',
         image: m2,
         review :'This is model two'
     },
     {
+        id: 3,
         name: 'Doww',
         image: m3,
         review :'This is model three'
     },
     {
+        id: 4,
         name: 'Kewiew',
         image: m4,
         review :'This is model four'
     },
     {
+        id: 5,
         name: 'Kelwa',
         image: m5,
         review :'This is model five'
     },
     {
+        id: 6,
         name: 'reno',
         image: m6,
         review :'This is model six'
     },
     {
+        id: 7,
         name: 'Khan',
         image: m7,
         review :'this is model seven'
     },
     {
+        id: 8,
         name: 'Rawi',
         image: m8,
         review :'This is model eight'
     },
     {
+        id: 9,
         name: 'Rekesh',
         image: m9,
         review :'This is model nine'
