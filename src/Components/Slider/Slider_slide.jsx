@@ -20,3 +20,5 @@ const sliderData = [
         desc: 'result it did (till the night of Feb 8) is perhaps what took many aback. Perhaps this was '
     },
 ]
+
+export default sliderData;

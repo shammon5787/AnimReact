@@ -14,7 +14,9 @@ const Team = () => {
         slidesToScroll: 1
     };
     return (
-        <div className='w-[70vw] m-auto'>
+        <>
+        <h1 className=' mt-36 text-white font-bold text-5xl items-center justify-center flex'>TEAM</h1>
+        <div className='w-[70vw] m-auto mt-4'>
             <Slider {...settings}>
                 {
                     product.map((prod) => (
@@ -31,6 +33,7 @@ const Team = () => {
                 }
             </Slider>
         </div>
+        </>
     )
 }
 
