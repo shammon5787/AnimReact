@@ -1,14 +1,19 @@
 import React from 'react'
-import Team from './Components/Team'
 import Navbar from './Components/Navbar'
-import Slider from './Components/Slider/Slider'
+import Home from './Pages/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Success from './Pages/Success'
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <Slider />
-      <Team />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/seccess' element={<Success />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
