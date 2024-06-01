@@ -1,30 +1,30 @@
-import img1 from '../Food/1.avif';
-import img2 from '../Food/2.avif';
-import img3 from '../Food/3.avif';
-import img4 from '../Food/4.avif';
-import img5 from '../Food/5.avif';
-import img6 from '../Food/6.avif';
-import img7 from '../Food/7.avif';
-import img8 from '../Food/8.avif';
-import img9 from '../Food/9.avif';
-import img10 from '../Food/10.avif';
-import img11 from '../Food/11.avif';
-import img12 from '../Food/12.avif';
-import img13 from '../Food/13.avif';
-import img14 from '../Food/14.avif';
-import img15 from '../Food/15.avif';
-import img16 from '../Food/16.avif';
-import img17 from '../Food/17.webp';
-import img18 from '../Food/18.avif';
-import img19 from '../Food/19.avif';
-import img20 from '../Food/20.webp';
+import img1 from '.././assets/1.avif';
+import img2 from '.././assets/2.avif';
+import img3 from '.././assets/3.avif';
+import img4 from '.././assets/4.avif';
+import img5 from '.././assets/5.avif';
+import img6 from '.././assets/6.avif';
+import img7 from '.././assets/7.avif';
+import img8 from '.././assets/8.avif';
+import img9 from '.././assets/9.avif';
+import img10 from '.././assets/10.avif';
+import img11 from '.././assets/11.avif';
+import img12 from '.././assets/12.avif';
+import img13 from '.././assets/13.avif';
+import img14 from '.././assets/14.avif';
+import img15 from '.././assets/15.avif';
+import img16 from '.././assets/16.avif';
+import img17 from '.././assets/17.webp';
+import img18 from '.././assets/18.avif';
+import img19 from '.././assets/19.avif';
+import img20 from '.././assets/20.webp';
 
 const FoodData = [
     {
         id: 1,
         name: "Food One" ,
         image: img1,
-        price: 23.5,
+        price: 20,
         desc: "ultimate step in avoiding periodic",
         ratting: 3
     },

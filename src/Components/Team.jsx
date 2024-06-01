@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Data from '../Data/Data'
+import FoodData from '../Data/FoodData.jsx'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const Team = () => {
-    const [product, setproduct] = useState(Data)
+    const [product, setproduct] = useState(FoodData)
     const settings = {
         dots: true,
         infinite: true,
