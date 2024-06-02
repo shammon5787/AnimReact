@@ -1,10 +1,14 @@
 import React from 'react'
-import img from '../assets/1.avif'
 import { IoStar } from "react-icons/io5";
+import { useDispatch } from 'react-redux';
+import { add } from '../Store/cardSlice';
 
-const Foodcard = ({name, image, rating, desc,  price}) => {
+const Foodcard = ({id, name, image, rating, desc,  price}) => {
+
+  const dispetch = useDispatch();
+
   return (
-    <div className='font-bold w-[230px] bg-white flex flex-col items-center p-5 rounded-lg'>
+    <div className='font-bold w-[230px] bg-slate-100 flex flex-col items-center p-5 rounded-lg'>
       <div>
       </div>
       <img className='w-[100px] h-[100px] rounded-full hover:scale-110 transition-all duration-500 cursor-grab object-cover opacity-1 ' src={image} alt="" />
@@ -17,7 +21,7 @@ const Foodcard = ({name, image, rating, desc,  price}) => {
         <span className='flex items-center justify-between gap-2'>
           <IoStar className='text-yellow-500' /> {rating}
         </span>
-        <button className='bg-indigo-900 px-2 py-1 rounded-md text-yellow-50'>Add To Card</button>
+        <button onClick={()=>dispetch(add({id, name, image, price, rating, qty: 1}))} className='bg-indigo-900 px-2 py-1 rounded-md text-yellow-50'>Add To Card</button>
       </div>
     </div>
   )

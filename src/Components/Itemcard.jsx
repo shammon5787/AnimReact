@@ -1,21 +1,25 @@
 import React from 'react'
-import img from '../assets/1.avif'
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
+import { useDispatch } from 'react-redux';
+import { remove } from '../Store/cardSlice';
 
-const Itemcard = () => {
+const Itemcard = ({id, name, price, image, qty}) => {
+
+    const dispatch = useDispatch();
+
     return (
         <div className='flex items-center gap-4 shadow-md rounded-lg p-2'>
-        <MdDelete className='absolute right-7 cursor-pointer mb-6' />
-            <img className='rounded-full w-[60px] h-[60px]' src={img} alt="" />
+        <MdDelete onClick={()=> dispatch(remove({id, name, price, image, qty}))} className='absolute right-7 cursor-pointer mb-6' />
+            <img className='rounded-full w-[60px] h-[60px]' src={image} alt="" />
             <div className='leading-5'>
-                <h2>Onion Pizza</h2>
+                <h2>{name}</h2>
                 <div className='flex justify-between items-center'>
-                    <span>$: 23</span>
+                    <span>$: {price}</span>
                     <div className='flex items-center fixed right-7'>
                         <FaPlus className='font-semibold text-lg border rounded-lg border-r-2 cursor-pointer hover:scale-50 transition-all duration-500' />
-                        <span>1</span>
+                        <span>{qty}</span>
                         <FaMinus className='font-semibold text-lg border rounded-lg border-r-2 cursor-pointer hover:scale-50 transition-all duration-500' />
                     </div>
                 </div>
