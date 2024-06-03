@@ -7,7 +7,7 @@ import { MdShoppingCart } from "react-icons/md";
 const Card = () => {
 
   const cartitem = useSelector((state) => state.cart.cart);
-  const [activeCart, setactiveCart] = useState(true)
+  const [activeCart, setactiveCart] = useState()
 
   return (
     <>
@@ -18,7 +18,7 @@ const Card = () => {
           <ImCross onClick={() => setactiveCart(!activeCart)} className='right-7 top-1 absolute cursor-pointer hover:text-green-600' />
         </div>
         {
-          cartitem.length>0 ? cartitem.map((itemList)=>(
+          cartitem.length > 0 ? cartitem.map((itemList)=>(
             <Itemcard  key={itemList.id}
             id = {itemList.id} 
             name = {itemList.name} 

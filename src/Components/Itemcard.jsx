@@ -3,7 +3,7 @@ import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';
-import { remove } from '../Store/cardSlice';
+import { decrementQty, inrementQty, remove } from '../Store/cardSlice';
 
 const Itemcard = ({id, name, price, image, qty}) => {
 
@@ -17,10 +17,10 @@ const Itemcard = ({id, name, price, image, qty}) => {
                 <h2>{name}</h2>
                 <div className='flex justify-between items-center'>
                     <span>$: {price}</span>
-                    <div className='flex items-center fixed right-7'>
-                        <FaPlus className='font-semibold text-lg border rounded-lg border-r-2 cursor-pointer hover:scale-50 transition-all duration-500' />
+                    <div className='flex items-center fixed right-7 gap-2'>
+                        <FaPlus onClick={()=> dispatch(inrementQty({id}))} className='font-semibold text-lg border rounded-lg border-r-2 cursor-pointer hover:scale-50 transition-all duration-500' />
                         <span>{qty}</span>
-                        <FaMinus className='font-semibold text-lg border rounded-lg border-r-2 cursor-pointer hover:scale-50 transition-all duration-500' />
+                        <FaMinus onClick={()=>  qty > 1 ? dispatch(decrementQty({id}))  : (qty = 0)} className='font-semibold text-lg border rounded-lg border-r-2 cursor-pointer hover:scale-50 transition-all duration-500' />
                     </div>
                 </div>
             </div>
