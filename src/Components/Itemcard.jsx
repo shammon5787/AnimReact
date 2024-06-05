@@ -12,7 +12,7 @@ const Itemcard = ({id, name, price, image, qty}) => {
     return (
         <div className='flex items-center gap-4 shadow-md rounded-lg p-2'>
         <MdDelete onClick={()=> dispatch(remove({id, name, price, image, qty}))} className='absolute right-7 cursor-pointer mb-6' />
-            <img className='rounded-full w-[60px] h-[60px]' src={image} alt="" />
+            <img className='rounded-full w-[60px] h-[60px] ' src={image} alt="" />
             <div className='leading-5'>
                 <h2>{name}</h2>
                 <div className='flex justify-between items-center'>

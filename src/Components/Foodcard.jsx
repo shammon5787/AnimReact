@@ -11,7 +11,7 @@ const Foodcard = ({id, name, image, rating, desc,  price}) => {
     <div className='font-bold w-[230px] bg-slate-100 flex flex-col items-center p-5 rounded-lg'>
       <div>
       </div>
-      <img className='w-[100px] h-[100px] rounded-full hover:scale-110 transition-all duration-500 cursor-grab object-cover opacity-1 ' src={image} alt="" />
+      <img className='w-[100px] h-[100px] rounded-full hover:scale-110 transition-all duration-500 cursor-grab object-cover opacity-1 animate-pulse' src={image} alt="" />
       <div className='flex items-center justify-between gap-20'>
         <h2>{name}</h2>
         <span>$ {price}</span>

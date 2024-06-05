@@ -1,9 +1,15 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { setSearch } from '../Store/SearchSlice';
 
 const Navbar = () => {
+
+    const dispetch = useDispatch();
+
+
     return (
         <>
-            <div className='bg-gray-900 text-cyan-200 p-7 items-center justify-center'>
+            {/* <div className='bg-gray-900 text-cyan-200 p-7 items-center justify-center'>
                 <div className='flex items-center justify-between px-4'>
                     <span>PAK</span>
                     <div>
@@ -15,7 +21,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <hr className='text-blue-950 mt-4 mb-4 pt-0 bg-slate-900' />
             <div className='flex flex-col lg:flex-row g:items-center justify-between p-5'>
                 <div>
@@ -23,7 +29,7 @@ const Navbar = () => {
                     <h3 className='text-gray-600 font-bold'>SERVICES FOR YOU BENEFITS</h3>
                 </div>
                 <div>
-                    <input type="search" name='search' placeholder='search food here' autoComplete='off' id='' className='p-2 border rounded-lg outline-none w-full'/>
+                    <input onChange={(e)=>dispetch(setSearch(e.target.value))} type="search" name='search' placeholder='search food here' autoComplete='off' id='' className='p-2 border rounded-lg outline-none w-full'/>
                 </div>
             </div>
         </>
